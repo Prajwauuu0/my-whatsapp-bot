@@ -6,7 +6,13 @@ let greetedUsers = new Set();
 venom
   .create({
     session: 'my-bot-session',
-    headless: true,
+    headless: 'new', // Recommended way for servers
+    puppeteerOptions: {
+      args: [
+        '--no-sandbox',
+        '--disable-setuid-sandbox'
+      ]
+    }
   })
   .then((client) => start(client))
   .catch((err) => console.log(err));
