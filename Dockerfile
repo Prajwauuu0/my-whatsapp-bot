@@ -1,5 +1,5 @@
 # Use an official Node.js runtime as a parent image
-FROM node:18-buster
+FROM node:18-bookworm
 
 # Install necessary dependencies for Puppeteer/Chrome
 RUN apt-get update && apt-get install -yq gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 \
